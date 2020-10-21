@@ -15,7 +15,7 @@ class App extends Component {
     	return(
     		<div id="main">
 				<button id="click" onClick={this.handleClick} >Click</button>
-				{ this.state.displayPara ? <p id="para" style={{display:"hidden"}} >Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : undefined}
+				{ this.state.displayPara ? <p id="para" >Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : undefined}
     		</div>
     	);
     };
