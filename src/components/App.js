@@ -5,7 +5,6 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { displayPara: false };
-    this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState({ displayPara: true });
@@ -13,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        <button id="click" onClick={this.handleClick}>
+        <button id="click" onClick={() => this.handleClick()}>
           Click
         </button>
         {this.state.displayPara ? (
