@@ -4,18 +4,17 @@ import '../styles/App.css';
 class App extends Component {
     constructor(props) {
 		super(props);
-		this.state={
-			displayPara:false
-		};
+		this.state={displayPara:false};
 	};
-	handleClick =(event)=>{
-		this.setState({displayPara:true});
-	};
+	
     render() {
+		const handleClick =(event)=>{
+			this.setState({displayPara:true});
+		};
     	return(
     		<div id="main">
-				<button id="click" onClick={this.handleClick} >Click</button>
-				{ this.state.displayPara ? <p id="para" >Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : undefined}
+				<button id="click" onClick={()=>handleClick()} >Click</button>
+				{ this.state.displayPara ? <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : undefined}
     		</div>
     	);
     };
